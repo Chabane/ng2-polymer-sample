@@ -1,4 +1,4 @@
-export class /Users/chabane/Documents/dev/source/perso/chabaneRefesPage {
+export class chabaneREFES {
   navigateTo() {
     return browser.get('/');
   }

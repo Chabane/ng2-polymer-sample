@@ -1,10 +1,10 @@
-import { /Users/chabane/Documents/dev/source/perso/chabaneRefesPage } from './app.po';
+import { chabaneREFES } from './app.po';
 
-describe('/users/chabane/documents/dev/source/perso/chabane-refes App', function() {
-  let page: /Users/chabane/Documents/dev/source/perso/chabaneRefesPage;
+describe('chabaneREFES App', function() {
+  let page: chabaneREFES;
 
   beforeEach(() => {
-    page = new /Users/chabane/Documents/dev/source/perso/chabaneRefesPage();
+    page = new chabaneREFES();
   });
 
   it('should display message saying app works', () => {
