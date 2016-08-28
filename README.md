@@ -1,5 +1,5 @@
 # angular2-website
-Personal website built with Angular2 &amp; Polymer
+Personal website built with Angular-cli &amp; angular2-Polymer. The website use this pen : http://codepen.io/Mestika/pen/KVXVWE
 
 # install cli
 npm install -g typescript typings angular-cli@webpack 
@@ -18,4 +18,6 @@ ng serve
 
 # demo here
 http://chabanerefes.info
+
+
 
