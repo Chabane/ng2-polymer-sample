@@ -16,3 +16,6 @@ bower install
 # launch the app
 ng serve
 
+# demo here
+http://chabanerefes.info
+
