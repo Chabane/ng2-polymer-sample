@@ -1,0 +1,26 @@
+{
+  "name": "chabanerefes",
+  "description": "personal website",
+  "main": "index.html",
+  "authors": [
+    "chabane refes"
+  ],
+  "license": "MIT",
+  "homepage": "http://chabanerefes.info",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "paper-elements": "^1.0.7",
+    "paper-card": "^0.1.5",
+    "paper-input": "^1.1.17",
+    "paper-icon-button": "^1.1.2",
+    "iron-icon": "^1.0.10",
+    "paper-styles": "^1.1.4",
+    "font-awesome": "fontawesome#^4.6.3"
+  }
+}
