@@ -17,7 +17,7 @@ gulp.task('move-webcomponentsjs', function () {
 });
 
 gulp.task('move-font-awesome', function () {
-  return gulp.src(['bower_components/font-awesome/css/font-awesome.min.css']).pipe(gulp.dest('dist/files'));
+  return gulp.src(['dist/bower_components/font-awesome/css/font-awesome.min.css']).pipe(gulp.dest('dist/files'));
 });
 
 gulp.task('clean-elements-html', function () {
