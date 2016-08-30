@@ -13,8 +13,16 @@ npm install angular-cli@webpack
 # install bower for polymer
 bower install
 
-# launch the app
+# vulcanize the polymer
+npm install --save-dev gulp gulp-crisper gulp-clean gulp-vulcanize
+npm install -g gulp-crisper
+
+# launch the app on dev
 ng serve
+
+# launch the app on prod
+ng build -prod
+gulp
 
 # demo here
 http://chabanerefes.info

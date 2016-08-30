@@ -10,10 +10,10 @@
     "pree2e": "webdriver-manager update",
     "e2e": "protractor"
   },
-  "homepage" : "http://chabanerefes.info",
-  "repository" : { 
-    "type" : "git" , 
-    "url" : "https://github.com/Chabane/angular2-website"
+  "homepage": "http://chabanerefes.info",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Chabane/angular2-website"
   },
   "private": false,
   "dependencies": {
@@ -50,6 +50,10 @@
     "@types/protractor": "^1.5.16",
     "angular-cli": "1.0.0-beta.11-webpack.2",
     "codelyzer": "0.0.26",
+    "gulp": "^3.9.1",
+    "gulp-clean": "^0.3.2",
+    "gulp-crisper": "^1.1.0",
+    "gulp-vulcanize": "^6.1.0",
     "jasmine-core": "2.4.1",
     "jasmine-spec-reporter": "2.5.0",
     "karma": "0.13.22",
