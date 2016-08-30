@@ -38,9 +38,8 @@ gulp.task('clean-elements', function () {
 gulp.task('copy-polymer-dependencies', function() {
   gulp.src('dist/index.html')
     .pipe(htmlreplace({
-        'html': 'dist/elements.html',
-        'js': 'dist/elements.js',
-        'webcomponents': 'dist/webcomponents-lite.min.js'
+        'js': 'elements.js',
+        'webcomponents': 'webcomponents-lite.min.js'
     }))
     .pipe(gulp.dest('dist/'));
 });
