@@ -17,17 +17,13 @@ gulp.task('move-webcomponentsjs', function () {
 });
 
 gulp.task('move-font-awesome', function () {
-  return gulp.src(['dist/bower_components/font-awesome/css/font-awesome.min.css']).pipe(gulp.dest('dist/files'));
+  return gulp.src(['dist/bower_components/font-awesome/css/font-awesome.min.css', 'dist/bower_components/font-awesome/fonts/**'], {base: 'dist/bower_components/'})
+          .pipe(gulp.dest('dist/files/fonts'));
 });
 
-gulp.task('clean-elements-html', function () {
-  return gulp.src('dist/elements.html')
+gulp.task('clean', function () {
+  return gulp.src(['dist/elements.html', 'dist/bower_components'])
     .pipe(clean({force: true}));
-});
-
-gulp.task('clean-bower-components', function () {
-  return gulp.src('dist/bower_components', {read: false})
-    .pipe(clean());
 });
 
 gulp.task('move-elements', function () {
@@ -42,14 +38,13 @@ gulp.task('clean-elements', function () {
 gulp.task('copy-polymer-dependencies', function() {
   gulp.src('dist/index.html')
     .pipe(htmlreplace({
-        'css': 'font-awesome.min.css',
-        'js': 'elements.js',
-        'webcomponents': 'webcomponents-lite.min.js'
+        'css': 'fonts/font-awesome/css/font-awesome.min.css',
+        'js': 'webcomponents-lite.min.js'
     }))
     .pipe(gulp.dest('dist/'));
 });
 
 gulp.task('default', function(callback) {
-  runSequence('vulcanize', ['move-webcomponentsjs', 'move-font-awesome'], ['clean-elements-html', 'clean-bower-components'], 'move-elements', 'clean-elements', 'copy-polymer-dependencies',
+  runSequence('vulcanize', ['move-webcomponentsjs', 'move-font-awesome'], 'clean', 'move-elements', 'clean-elements', 'copy-polymer-dependencies',
               callback);
 });
