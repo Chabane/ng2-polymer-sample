@@ -14,7 +14,6 @@ npm install angular-cli@webpack
 bower install
 
 # vulcanize the polymer
-npm install --save-dev gulp gulp-crisper gulp-clean gulp-vulcanize
 npm install -g gulp-crisper
 
 # launch the app on dev
