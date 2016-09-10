@@ -1,4 +1,6 @@
-export class chabaneREFES {
+import { browser, element, by } from 'protractor/globals';
+
+export class ChabanerefesPage {
   navigateTo() {
     return browser.get('/');
   }

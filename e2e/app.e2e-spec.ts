@@ -1,10 +1,10 @@
-import { chabaneREFES } from './app.po';
+import { ChabanerefesPage } from './app.po';
 
-describe('chabaneREFES App', function() {
-  let page: chabaneREFES;
+describe('chabanerefes App', function() {
+  let page: ChabanerefesPage;
 
   beforeEach(() => {
-    page = new chabaneREFES();
+    page = new ChabanerefesPage();
   });
 
   it('should display message saying app works', () => {
