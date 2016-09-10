@@ -7,7 +7,7 @@ npm install -g typescript typings angular-cli@webpack
 # into src 
 npm install 
 
-# reinstall angular-cli@webpacl
+# reinstall angular-cli@webpack
 npm install angular-cli@webpack
 
 # install bower for polymer

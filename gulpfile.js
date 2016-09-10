@@ -9,7 +9,7 @@ gulp.task('vulcanize', function() {
   return gulp.src('dist/assets/elements.html')
     .pipe(vulcanize())
     .pipe(crisper())
-    .pipe(gulp.dest('dist/files'));
+    .pipe(gulp.dest('dist/assets'));
   });
 
 gulp.task('move-webcomponentsjs', function () {
@@ -22,7 +22,7 @@ gulp.task('move-font-awesome', function () {
 });
 
 gulp.task('clean', function () {
-  return gulp.src(['dist/assets/elements.html', 'dist/assets/bower_components'])
+  return gulp.src(['dist/assets/bower_components'])
     .pipe(clean({force: true}));
 });
 
@@ -45,6 +45,6 @@ gulp.task('copy-polymer-dependencies', function() {
 });
 
 gulp.task('default', function(callback) {
-  runSequence('vulcanize', ['move-webcomponentsjs', 'move-font-awesome'], 'clean', 'move-elements', 'clean-elements', 'copy-polymer-dependencies',
+  runSequence('vulcanize', ['move-webcomponentsjs', 'move-font-awesome'], ['clean', 'move-elements'], 'clean-elements', 'copy-polymer-dependencies',
               callback);
 });
