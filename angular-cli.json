@@ -1,6 +1,6 @@
 {
   "project": {
-    "version": "1.0.0-beta.11-webpack.9-4",
+    "version": "1.0.0-beta.14",
     "name": "chabanerefes"
   },
   "apps": [
@@ -14,7 +14,9 @@
       "tsconfig": "tsconfig.json",
       "prefix": "app",
       "mobile": false,
-      "styles": [],
+      "styles": [
+        "styles.css"
+      ],
       "scripts": [],
       "environments": {
         "source": "environments/environment.ts",
@@ -36,7 +38,7 @@
     }
   },
   "defaults": {
-    "styleExt": "scss",
+    "styleExt": "css",
     "prefixInterfaces": false
   }
 }
