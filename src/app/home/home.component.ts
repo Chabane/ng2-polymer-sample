@@ -33,7 +33,11 @@ export class HomeComponent implements OnInit {
     this.people = [{
       id: 1, firstName: "name", lastName: "prenom", email: "email", parentId: null, isOpened: false,
       children: [
-        { id: 3, firstName: "name1", lastName: "prenom2", email: "email3", parentId: 1, isOpened: false, children: null }
+        {
+          id: 3, firstName: "name1", lastName: "prenom2", email: "email3", parentId: 1, isOpened: false, children: [
+            { id: 4, firstName: "name1", lastName: "prenom2", email: "email3", parentId: 3, isOpened: false, children: null }
+          ]
+        }
       ]
     },
       { id: 2, firstName: "name", lastName: "prenom", email: "email", parentId: null, children: null, isOpened: false }];
