@@ -4,7 +4,7 @@ import { PolymerElement } from '@vaadin/angular2-polymer';
 
 const POLYMER_MODULES = [
  PolymerElement('paper-input'), 
- PolymerElement('paper-card'), PolymerElement('paper-icon-button'), PolymerElement('iron-icon')
+ PolymerElement('paper-card'), PolymerElement('paper-icon-button'), PolymerElement('paper-button'), PolymerElement('iron-icon'), PolymerElement('vaadin-grid')
 ];
 
 @NgModule({

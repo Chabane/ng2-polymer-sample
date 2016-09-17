@@ -31,7 +31,7 @@
     "@angular2-material/radio": "^2.0.0-alpha.8.1",
     "@angular2-material/sidenav": "^2.0.0-alpha.8.1",
     "@angular2-material/toolbar": "^2.0.0-alpha.8.1",
-    "@vaadin/angular2-polymer": "^1.0.0-beta4",
+    "@vaadin/angular2-polymer": "^1.0.0-beta5",
     "core-js": "^2.4.1",
     "moment": "^2.14.1",
     "ng2-translate": "^2.4.2",
