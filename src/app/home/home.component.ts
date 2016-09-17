@@ -40,7 +40,15 @@ export class HomeComponent implements OnInit {
         }
       ]
     },
-      { id: 2, firstName: "name", lastName: "prenom", email: "email", parentId: null, children: null, isOpened: false }];
+      {
+        id: 2, firstName: "name", lastName: "prenom", email: "email", parentId: null, children: [
+          {
+            id: 5, firstName: "dd", lastName: "dd", email: "dd", parentId: 2, isOpened: false, children: [
+              { id: 6, firstName: "cc", lastName: "cc", email: "cc", parentId: 5, isOpened: false, children: null }
+            ]
+          }
+        ], isOpened: false
+      }];
   }
 
   onchange(event: any) {
@@ -55,15 +63,21 @@ export class HomeComponent implements OnInit {
         if (!this.people[index].isOpened) {
           this.people.splice.apply(this.people, [(index + 1), 0].concat(currentPerson.children));
         } else {
-          // if row is already opened, then remove all chidren
-          this.people.forEach((item, i) => {
-            if (item.parentId === currentPerson.id) {
-              this.people.splice(i, 1);
-            }
-          });
+          // if row is already opened, then remove all chidren recursively
+          this.removeChildren(currentPerson.id);
         }
         currentPerson.isOpened = !currentPerson.isOpened;
       }
     }
+  }
+
+  // remove all children of node
+  removeChildren(id: number) {
+    this.people.forEach((item, i) => {
+      if (item.parentId === id) {
+        this.people.splice(i, 1);
+        this.removeChildren(item.id);
+      }
+    });
   }
 }
