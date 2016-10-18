@@ -1,5 +1,15 @@
 @import '../shared/styles/_variables';
 
+ vaadin-grid {
+   td {
+     padding: 0px;
+   }
+ }
+
+ .stylerow {
+   color:red;
+ }
+
 .profile-card {
   background: $orange;
   width: 56px;
